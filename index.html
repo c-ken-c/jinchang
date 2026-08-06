@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>晉昌貿易有限公司 | JIN CHANG HARDWARE TRADING CO., LTD.</title>
+  <meta name="description" content="晉昌貿易 — 您工業流體控制的堅實後盾。專業提供氣動執行器、電動執行器、閥門解決方案與系統整合服務。">
+  <style>
+    /* CSS Variables for Theme */
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --burgundy: #6B1D2F;
+      --burgundy-light: #8B2D42;
+      --burgundy-subtle: #F4EBEB;
+      --text-main: #2C2C2C;
+      --text-muted: #666666;
+      --border-color: #E8E2D9;
+      --max-width: 1140px;
+    }
+
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      /* Safe System Font Stack */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Layout Components */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--burgundy);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 3rem;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--burgundy);
+      letter-spacing: 0.05em;
+    }
+
+    .brand-en {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--burgundy);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 7rem 0 5rem 0;
+      text-align: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      background-color: var(--burgundy-subtle);
+      color: var(--burgundy);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2.5rem auto;
+      font-weight: 400;
+    }
+
+    .hero-values {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .value-pill {
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-card);
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Cards & Containers */
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem 2rem;
+      border-radius: 6px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    }
+
+    .card-badge {
+      font-size: 0.75rem;
+      color: var(--burgundy);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .card-text {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .card-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .card-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.925rem;
+      color: var(--text-main);
+    }
+
+    .card-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--burgundy);
+    }
+
+    /* Material Tags */
+    .material-box {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .material-box h4 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background-color: var(--bg-cream);
+      border: 1px solid var(--border-color);
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Track Record / Timeline */
+    .record-card {
+      background-color: var(--bg-card);
+      border-left: 3px solid var(--burgundy);
+      border-top: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem 1.75rem;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .record-date {
+      font-size: 0.8rem;
+      color: var(--burgundy);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .record-category {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Company Info & Contact Footer */
+    footer {
+      background-color: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      padding: 5rem 0 3rem 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .company-details h3 {
+      font-size: 1.5rem;
+      color: var(--burgundy);
+      margin-bottom: 0.25rem;
+    }
+
+    .company-details .en-name {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-list li {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+      display: flex;
+    }
+
+    .info-label {
+      width: 100px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .info-value {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .nav-links {
+        display: none; /* Can be enhanced with JS mobile menu */
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <span class="brand-name">晉昌貿易</span>
+        <span class="brand-en">JIN CHANG TRADING</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">關於晉昌</a></li>
+        <li><a href="#brands">品牌佈局</a></li>
+        <li><a href="#services">專業領域</a></li>
+        <li><a href="#records">實績應用</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-tag">工業流體控制系統整合服務</span>
+      <h1 class="hero-title">精準控制 · 驅動未來</h1>
+      <p class="hero-subtitle">晉昌貿易 — 您工業流體控制的堅實後盾。深耕業界超過15年，致力於提供最高品質的閥門與執行器解決方案。</p>
+      <div class="hero-values">
+        <span class="value-pill">專業</span>
+        <span class="value-pill">可靠</span>
+        <span class="value-pill">精準</span>
+        <span class="value-pill">效率</span>
+        <span class="value-pill">創新</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 class="section-title">關於晉昌貿易</h2>
+        <p class="section-subtitle">ABOUT JIN CHANG</p>
+        <p style="font-size: 1.1rem; color: var(--text-main); line-height: 1.9;">
+          晉昌貿易有限公司成立於2012年，團隊深耕工業流體控制領域超過15年。我們以優質的產品與專業技術支援，為化工、市政水處理、自動化設備與衛生級製程等多元領域提供高穩定度、高可靠性的流體控制模組與整合服務。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section id="brands" style="background-color: var(--bg-cream);">
+    <div class="container">
+      <h2 class="section-title">品牌佈局</h2>
+      <p class="section-subtitle">BRAND PORTFOLIO</p>
+
+      <div class="grid-2">
+        <!-- B-TORQUE -->
+        <div class="card">
+          <span class="card-badge">自有註冊商標</span>
+          <h3 class="card-title">B-TORQUE 氣動控制</h3>
+          <p class="card-text">專為極速響應與高頻繁作動環境設計，適用於防爆需求及化工危險區域。</p>
+          <ul class="card-list">
+            <li>B-TORQUE 氣動執行器</li>
+            <li>氣動球閥 / 氣動蝶閥整合系統</li>
+            <li>極速響應、高穩定性扭矩輸出</li>
+          </ul>
+        </div>
+
+        <!-- FLOWINN -->
+        <div class="card">
+          <span class="card-badge">官方授權經銷品牌</span>
+          <h3 class="card-title">FLOWINN 電動控制</h3>
+          <p class="card-text">提供精準定位與穩定扭矩，適用於遠端智慧控制與無氣源廠房配置。</p>
+          <ul class="card-list">
+            <li>FLOWINN 電動執行器</li>
+            <li>電動球閥 / 電動蝶閥整合系統</li>
+            <li>標配手輪設計、IP等級防護外殼</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Applicable Materials -->
+      <div class="material-box">
+        <h4>適用閥體材質對應</h4>
+        <div class="tags">
+          <span class="tag">工業塑膠</span>
+          <span class="tag">合金金屬</span>
+          <span class="tag">衛生食品級</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competencies Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">專業領域</h2>
+      <p class="section-subtitle">CORE COMPETENCIES</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title" style="color: var(--burgundy);">01. 執行器系統</h3>
+          <ul class="card-list">
+            <li>氣動執行器系統</li>
+            <li>電動執行器系統</li>
+            <li>精準力矩控制與防護</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title" style="color: var(--burgundy);">02. 閥門解決方案</h3>
+          <ul class="card-list">
+            <li>工業級球閥 / 高性能蝶閥</li>
+            <li>比例控制閥</li>
+            <li>材質對應（塑膠 / 金屬 / 食品級）</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title" style="color: var(--burgundy);">03. 系統與設備</h3>
+          <ul class="card-list">
+            <li>製程控制整合</li>
+            <li>水處理設備應用</li>
+            <li>自動化管線配置與規劃</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Track Record Section -->
+  <section id="records" style="background-color: var(--bg-cream);">
+    <div class="container">
+      <h2 class="section-title">實績應用</h2>
+      <p class="section-subtitle">ENGINEERING TRACK RECORD</p>
+
+      <div class="grid-4">
+        <div class="record-card">
+          <div class="record-date">2020.12</div>
+          <div class="record-category">化學與消防</div>
+          <p class="card-text">勝一化工二廠專案<br>消防泡沫工程控制系統部署</p>
+        </div>
+
+        <div class="record-card">
+          <div class="record-date">2020.04</div>
+          <div class="record-category">市政工程</div>
+          <p class="card-text">台中市福田水資源中心<br>大型水處理流體控制模組</p>
+        </div>
+
+        <div class="record-card">
+          <div class="record-date">2017.04</div>
+          <div class="record-category">設備製造</div>
+          <p class="card-text">台南曄拓設備<br>工業設備自動化閥件導入</p>
+        </div>
+
+        <div class="record-card">
+          <div class="record-date">2021.07</div>
+          <div class="record-category">衛生製程</div>
+          <p class="card-text">食品與生技產業<br>電動衛生級蝶閥精準配置</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer Section -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="company-details">
+          <h3>晉昌貿易有限公司</h3>
+          <div class="en-name">JIN CHANG HARDWARE TRADING CO., LTD.</div>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 400px;">
+            您工業流體控制的堅實後盾，提供全方位的閥門與自動化控制解決方案。
+          </p>
+        </div>
+
+        <div>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">統一編號</span>
+              <span class="info-value">53887225</span>
+            </li>
+            <li>
+              <span class="info-label">代表人</span>
+              <span class="info-value">林淑如</span>
+            </li>
+            <li>
+              <span class="info-label">電話</span>
+              <span class="info-value"><a href="tel:0422631958" style="color: inherit; text-decoration: none;">04-22631958</a></span>
+            </li>
+            <li>
+              <span class="info-label">傳真</span>
+              <span class="info-value">04-22631908</span>
+            </li>
+            <li>
+              <span class="info-label">電子信箱</span>
+              <span class="info-value"><a href="mailto:jinchang0819@gmail.com" style="color: inherit; text-decoration: none;">jinchang0819@gmail.com</a></span>
+            </li>
+            <li>
+              <span class="info-label">公司地址</span>
+              <span class="info-value">臺中市烏日區三榮六路50巷3號1樓</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; <script>document.write(new Date().getFullYear())</script> 晉昌貿易有限公司 JIN CHANG HARDWARE TRADING CO., LTD. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/jinchang-logo-mark.png">
+  <link rel="apple-touch-icon" href="assets/images/jinchang-logo-mark.png">
   <title>晉昌貿易有限公司 | JIN CHANG HARDWARE TRADING CO., LTD.</title>
   <meta name="description" content="晉昌貿易 — 您工業流體控制的堅實後盾。專業提供氣動執行器、電動執行器、閥門解決方案與系統整合服務。">
   <style>
@@ -85,20 +87,36 @@
 
     .brand-logo {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 0.7rem;
       text-decoration: none;
+    }
+
+    .brand-logo img {
+      display: block;
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 3px 8px rgba(5, 48, 115, 0.14));
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
     }
 
     .brand-name {
       font-size: 1.25rem;
       font-weight: 700;
-      color: var(--burgundy);
+      color: #092f70;
       letter-spacing: 0.05em;
     }
 
     .brand-en {
       font-size: 0.65rem;
-      color: var(--text-muted);
+      color: #46658f;
       letter-spacing: 0.08em;
     }
 
@@ -357,6 +375,16 @@
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
+      .brand-logo img {
+        width: 46px;
+        height: 46px;
+      }
+      .brand-name {
+        font-size: 1.05rem;
+      }
+      .brand-en {
+        font-size: 0.58rem;
+      }
       .hero-title {
         font-size: 2rem;
       }
@@ -376,8 +404,11 @@
   <header>
     <div class="container nav-container">
       <a href="#" class="brand-logo">
-        <span class="brand-name">晉昌貿易</span>
-        <span class="brand-en">JIN CHANG TRADING</span>
+        <img src="assets/images/jinchang-logo-mark.png" alt="晉昌貿易有限公司 Logo" width="52" height="52">
+        <span class="brand-copy">
+          <span class="brand-name">晉昌貿易</span>
+          <span class="brand-en">JIN CHANG TRADING</span>
+        </span>
       </a>
       <ul class="nav-links">
         <li><a href="#about">關於晉昌</a></li>

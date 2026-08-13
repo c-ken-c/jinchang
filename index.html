@@ -68,6 +68,46 @@
       margin-bottom: 3rem;
     }
 
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .about-copy {
+      text-align: left;
+    }
+
+    .about-copy p:last-child {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      line-height: 1.9;
+    }
+
+    .about-product {
+      margin: 0;
+      padding: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+    }
+
+    .about-product img {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+    }
+
+    .about-product figcaption {
+      margin-top: 1rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
     /* Header & Navigation */
     header {
       position: sticky;
@@ -375,6 +415,17 @@
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .about-copy {
+        text-align: center;
+      }
+      .about-product {
+        max-width: 420px;
+        margin: 0 auto;
+      }
       .brand-logo img {
         width: 46px;
         height: 46px;
@@ -439,12 +490,18 @@
   <!-- About Section -->
   <section id="about">
     <div class="container">
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <h2 class="section-title">關於晉昌貿易</h2>
-        <p class="section-subtitle">ABOUT JIN CHANG</p>
-        <p style="font-size: 1.1rem; color: var(--text-main); line-height: 1.9;">
-          晉昌貿易有限公司成立於2012年，團隊深耕工業流體控制領域超過15年。我們以優質的產品與專業技術支援，為化工、市政水處理、自動化設備與衛生級製程等多元領域提供高穩定度、高可靠性的流體控制模組與整合服務。
-        </p>
+      <div class="about-layout">
+        <div class="about-copy">
+          <h2 class="section-title">關於晉昌貿易</h2>
+          <p class="section-subtitle">ABOUT JIN CHANG</p>
+          <p>
+            晉昌貿易有限公司成立於2012年，團隊深耕工業流體控制領域超過15年。我們以優質的產品與專業技術支援，為化工、市政水處理、自動化設備與衛生級製程等多元領域提供高穩定度、高可靠性的流體控制模組與整合服務。
+          </p>
+        </div>
+        <figure class="about-product">
+          <img src="assets/images/b-torque-pneumatic-ball-valve.jpg" alt="晉昌 B-TORQUE 氣動球閥執行器實裝" width="1240" height="1754" decoding="async">
+          <figcaption>氣動球閥執行器實裝 — B-TORQUE 系列</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -559,6 +616,24 @@
           <div class="record-date">2021.07</div>
           <div class="record-category">衛生製程</div>
           <p class="card-text">食品與生技產業<br>電動衛生級蝶閥精準配置</p>
+        </div>
+
+        <div class="record-card">
+          <div class="record-date">水處理工程</div>
+          <div class="record-category">淨水處理</div>
+          <p class="card-text">曾文溪淨水廠沉澱池改善工程</p>
+        </div>
+
+        <div class="record-card">
+          <div class="record-date">水資源循環</div>
+          <div class="record-category">中水回收</div>
+          <p class="card-text">西湖服務區污水場中水回收系統</p>
+        </div>
+
+        <div class="record-card">
+          <div class="record-date">智慧水務</div>
+          <div class="record-category">中水道應用與維運</div>
+          <p class="card-text">水湳經貿園區中水道應用系統及智慧管理操作維護工程</p>
         </div>
       </div>
     </div>
